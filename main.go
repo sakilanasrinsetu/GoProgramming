@@ -15,9 +15,6 @@ import (
 		d, err := ioutil.ReadAll(r.Body)
 		
 		if err != nil {
-			// rw.WriteHeader(http.StatusBadRequest)
-			// rw.Write([]byte("Ooops"))
-			// return
 			http.Error(rw, "Opps", http.StatusBadRequest)
 			return
 		}
